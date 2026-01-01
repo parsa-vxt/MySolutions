@@ -19,15 +19,9 @@ int main() {
     int n, k;
     cin >> n >> k;
 
-    int d = n - 1;
-    int ns = k / d;
+    int skippedMultiplesOfN = (k - 1) / (n - 1);
 
-    int ans = (ns * n) - 1;
-
-    int r = k % d;
-    if (r > 0) ans += ++r;
-
-    cout << ans << "\n";
+    cout << (k + skippedMultiplesOfN) << "\n";
   }
 
   return 0;
